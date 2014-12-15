@@ -8,32 +8,24 @@ public class Person implements Comparable {
 	private String lastName;
 	private String birthday;
 	private Date birthdayDate;
-//Konstruktor za parsiranje bez unesenog datuma rođenja
-	Person (String fName, String lName){
-		firstName = fName;
-		lastName = lName;
-		birthday= "";
-		parsiraj();
+
+
+	public Person(String firstName, String lastName, String birthday){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthday = birthday;
+		parse();
 	}
-//Konstruktor za parsiranje sa svim unesenim parametrima
-	Person(String fName, String lName, String birth){
-		firstName = fName;
-		lastName = lName;
-		birthday = birth;
-		parsiraj();
-	}
-//privatni metod koji parsira datum rođenja	
-	private void parsiraj(){
+	private void parse(){
 		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 		try {
-			birthdayDate=format.parse((birthday!="")?birthday:"99.99.9999");
+			birthdayDate=format.parse((birthday != null)?birthday:"99.99.9999");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 	}
 	@Override
-	public String toString(){
-		
+	public String toString(){		
 		return firstName + " " + lastName + " " + birthday;
 	}
 	

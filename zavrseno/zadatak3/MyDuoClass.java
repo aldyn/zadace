@@ -3,38 +3,31 @@ package zadatak3;
 public class MyDuoClass {
 	private static MyDuoClass instance;
 	private static MyDuoClass instance2;
-	private String _name;
 	
-	public MyDuoClass(){}
-	
-	public MyDuoClass(String name){
-		_name = name;
-	}
-	public static MyDuoClass getInstance(String name){
+	private MyDuoClass(){}
+
+	public static MyDuoClass getInstance(){
 		if(instance == null){
-			instance = new MyDuoClass(name);
+			instance = new MyDuoClass();
 			return instance;
 		}
 		else if(instance2 == null){
-			instance2=new MyDuoClass(name);
+			instance2=new MyDuoClass();
 			return instance2;
 		}		
 		return instance;
 	}
-	public String getName(){
-		return _name;
-	}
 
 	public static void main(String argv[]){
-		MyDuoClass md1=new MyDuoClass().getInstance("Aldin");
-		MyDuoClass md2=new MyDuoClass().getInstance("Adnan");
-		MyDuoClass md3=new MyDuoClass().getInstance("Colic");
-		MyDuoClass md4=new MyDuoClass().getInstance("Alicic");
-
-		System.out.println(md1.getName());
-		System.out.println(md2.getName());
-		System.out.println(md3.getName());
-		System.out.println(md4.getName());	
+		MyDuoClass md1=new MyDuoClass().getInstance();
+		MyDuoClass md2=new MyDuoClass().getInstance();
+		MyDuoClass md3=new MyDuoClass().getInstance();
+		MyDuoClass md4=new MyDuoClass().getInstance();
+		
+		System.out.println(md1);
+		System.out.println(md2);
+		System.out.println(md3);
+		System.out.println(md4);
 		
 	}
 }

@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+.user{
+	font-size:20px;
+	color:blue;	
+}
+
+.message{
+	background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;	    
+}
+.scroll{
+	width:500px; 
+	height:300px; 
+	overflow-y:auto; 
+	overflow-x:hidden;
+	font-family:monospace; 
+	margin:0 auto 0 auto;
+}

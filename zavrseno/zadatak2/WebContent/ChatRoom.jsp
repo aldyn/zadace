@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>chatRoom</title>
+<title>ChatRoom</title>
 </head>
 <body>
 	<table width:50% class="table1">

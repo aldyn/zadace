@@ -1,5 +1,16 @@
-@CHARSET "UTF-8";
 
+ .table1{
+ position:fixed; 
+ left:25%; 
+ top:15%;
+ }
+ 
+ .table2{
+ 	position:fixed; 
+ 	left:40%; 
+ 	top:40%;
+ }
+ 
 .user{
 	font-size:20px;
 	color:blue;	
